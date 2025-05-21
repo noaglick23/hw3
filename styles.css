@@ -1,0 +1,243 @@
+/* --- Custom Font: Glary Tropic --- */
+@font-face {
+    font-family: 'GlaryTropic'; 
+    src: url('./font/Skranji-Regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    text-align: center;
+    background-image: url('images/jungel2.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+
+  h1 {
+    /* title */
+        font-size: 10rem;
+        color: #ffffff;
+        font-family: 'GlaryTropic', cursive;
+        text-shadow: 8px 8px 15px rgba(0, 0, 0, 0.9);
+        margin-top: 100px;
+        margin-bottom: 0;
+      }
+
+      /*  Audio button design */
+  #toggleMusicButton {
+    position: fixed; 
+    bottom: 20px;   
+    right: 20px;     
+    z-index: 1000;   
+
+    background-color: rgba(0, 0, 0, 0.6); 
+    border: 2px solid #a8c42a;
+    border-radius: 50%; 
+    width: 60px;
+    height: 60px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  }
+
+        /*  Audio button hover */
+
+  #toggleMusicButton:active {
+    transform: scale(0.95); /* אפקט לחיצה קטן */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+
+  /* location for the buttons */
+  .set {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+    max-width: 980px;
+  }
+
+  /* buttons - design */
+  .animal-button {
+    outline: none;
+    border: none;
+    font-size: 2.5rem;
+    font-family: 'Arvo', cursive;
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    cursor: pointer;
+
+     /* background under titels */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: relative;
+    overflow: hidden;
+
+    /* smooth transition */
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  }
+
+
+  /* Adding a layer to the text above the image */
+  .animal-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    z-index: 1;
+  }
+
+  /* button text */
+  .animal-button span {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* hover effact */
+  .animal-button:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+  }
+
+  /* When clicked (active) - ensures no change in size or strong shadow */
+  .animal-button:active {
+    transform: translateY(0); /* Return to original position */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Revert to default shadow */
+    opacity: 1; /* Ensure full opacity */
+  }
+
+
+  /* button's photo */
+  .elephant {
+    background-image: url('./images/elephant.jpg');
+  }
+
+  .gorilla {
+    background-image: url('./images/Gorilla.jpg');
+  }
+
+  .monkey {
+    background-image: url('./images/monkey.webp');
+  }
+
+  .frog {
+    background-image: url('./images/frog.avif');
+  }
+
+  .lion {
+    background-image: url('./images/lion.jpg');
+  }
+
+  .tiger {
+    background-image: url('./images/tiger.jpg');
+  }
+
+  .snake {
+    background-image: url('./images/snake.webp');
+  }
+
+
+  /* Centering and resizing a video to the button  */
+  .animal-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 300%;
+      height: 100%;
+
+      object-fit: contain;
+
+      border-radius: 50%;
+      z-index: 0;
+      display: block;
+  }
+
+
+/* Responsive Design - Media Query */
+
+/* Media Query -- For smaller screens (tablets and large phones)*/
+@media (max-width: 768px) {
+  h1 {
+    font-size: 5rem;
+    margin-top: 60px;
+  }
+
+  #toggleMusicButton {
+    width: 50px; /* קטן יותר במסכים קטנים */
+    height: 50px;
+    font-size: 2rem;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .animal-button {
+    width: 150px;
+    height: 150px;
+    font-size: 2rem;
+    margin: 8px;
+  }
+
+  .set {
+    gap: 15px;
+    max-width: unset;
+  }
+}
+
+/* Media Query --  for very small screens (e.g., max width 480 pixels)*/
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+    margin-top: 30px;
+  }
+
+  #toggleMusicButton {
+    width: 40px; /* קטן עוד יותר למובייל */
+    height: 40px;
+    font-size: 1.8rem;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .animal-button {
+    width: 100px;
+    height: 100px;
+    font-size: 1.5rem;
+    margin: 5px;
+  }
+
+  .set {
+    padding: 10px;
+    gap: 10px;
+  }
+}
