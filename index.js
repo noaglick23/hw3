@@ -60,27 +60,27 @@ function handleAnimalInteraction(key, buttonElement) {
             break;
         case 'gorilla':
             audio = new Audio("./sounds/gorilla.mp3");
-            videoSrc = "./video/gorilla.mp4";
+            videoSrc = "./gorilla.mp4";
             break;
         case 'monkey':
             audio = new Audio("./sounds/monkey_sound.mp3");
-            videoSrc = "./video/monkey.mp4";
+            videoSrc = "./monkey.mp4";
             break;
         case 'frog':
             audio = new Audio("./sounds/frog_sound.mp3");
-            videoSrc = "./video/frog.mp4";
+            videoSrc = "./frog.mp4";
             break;
         case 'lion':
             audio = new Audio("./sounds/lion_sound.mp3");
-            videoSrc = "./video/lion.mp4";
+            videoSrc = "./lion.mp4";
             break;
         case 'tiger':
             audio = new Audio("./sounds/tiger_sound.mp3");
-            videoSrc = "./video/tiger.mp4";
+            videoSrc = "./tiger.mp4";
             break;
         case 'snake':
             audio = new Audio("./sounds/snake_sound.mp3");
-            videoSrc = "./video/snake.mp4";
+            videoSrc = "./snake.mp4";
             break;
         default:
             console.log("No sound assigned for key:", key);
