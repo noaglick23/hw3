@@ -56,7 +56,7 @@ function handleAnimalInteraction(key, buttonElement) {
     switch (key) {
         case 'elephant':
             audio = new Audio("./sounds/elephant_sound.mp3");
-            videoSrc = "./video/elephant.mp4";
+            videoSrc = "./elephant.mp4";
             break;
         case 'gorilla':
             audio = new Audio("./sounds/gorilla.mp3");
